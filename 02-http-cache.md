@@ -212,6 +212,11 @@ Im HTTP-Request:
     Cache-Control: no-cache
 
 ---
+## Cache-Control Entscheidungshilfe
+
+![Cache-Control](figure/http-cache-control-flow.svg)
+
+---
 
 ## HTTP-Header: Last-Modified
 
