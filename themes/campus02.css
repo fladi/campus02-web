@@ -179,6 +179,15 @@ span,strong {
   display: inline-block;
 }
 
+small {
+    font-size: small;
+}
+
+img {
+    max-width: 100%;
+    min-width: 100%;
+}
+
 .present .positioning {
   -webkit-transform: translateY(-10px);
   -moz-transform: translateY(-10px);
