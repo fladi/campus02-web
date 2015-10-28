@@ -23,6 +23,17 @@ zugeordnet werden?
 ![](figure/http-cookies-2.svg)
 
 ---
+## Anwendungsfälle
+
+Wo wird üblicherweise eine gemeinsame Sitzung über mehrere HTTP-Verbindungen
+hinweg benötigt?
+
+* Login/Logout
+* Mehrseitige Formulare
+* Temporäre Einstellungen (Sprache, ...)
+* ...
+
+---
 ## Mögliche Ansätze
 
  * IP-Adressen?
@@ -74,11 +85,21 @@ Sitzung treffen.
 ---
 ## Sicherheit
 
-Um zu verhindern, dass Cookies *gestohlen* werden, können sie mehreren Einschränkungen unterliegen:
+Cookies sind sicherheitsrelevante Informationen. Sie dürfen nicht an
+unbeteiligte Dritte weitergegeben werden bzw. dürfen nicht zum Schaden des
+Benutzers entwendet werden.
 
- * Same-Origin-Policy
- * Secure
- * HttpOnly
+Um zu verhindern, dass Cookies **gestohlen** werden, können sie mehreren
+Einschränkungen unterliegen.
+
+---
+# Demo: Cookie-Diebstahl
+
+Bitte öffnen Sie [https://campus02.fladi.at/](https://campus02.fladi.at/) in
+Ihrem Webbrowser.
+
+Das zu schützende Cookie in diesem Beispiel ist eine zufällige **Session-ID**
+welche vom Webserver bei einem erfolgreichen Login erzeugt wird.
 
 ---
 ## Same-Origin-Policy
