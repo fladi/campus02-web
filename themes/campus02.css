@@ -98,6 +98,15 @@ blockquote {
 table {
   width:100%;
 }
+table.demo {
+  border: 2px solid black;
+}
+table.demo th {
+  border: 1px dashed black;
+}
+table.demo td {
+  border: 1px dotted black;
+}
 .present a {
   pointer-events: auto; /* Enable Click on link */
 }
