@@ -1,13 +1,15 @@
 ---
-
 author: Dr. Xiaoshan Liu, DI Michael Fladischer
 title: Web Grundlagen
 
 ---
-
 # HTML
 
 *HyperText Markup Language*
+
+<a href="https://www.campus02.at/">
+<div class="corner-ribbon top-right sticky yellow shadow">CAMPUS02</div>
+</a>
 
 ---
 ## Agenda
@@ -219,6 +221,27 @@ Weitere Modularisierung sowie geringere Fehlertoleranz.
 Unicode-Zeichen können in der [Unicode-Zeichen-Tabelle](http://unicode-table.com/de/) nachgeschlagen werden.
 
 ---
+# HTML5
+
+HTML5 Spezifikation definiert 2 mögliche Serialisierungen
+
+---
+
+![Die zwei Serialisierungen von HTML5](figure/html5-abstract-language.svg)
+
+---
+## Unterschiede in der Serialisierung
+
+| **HTML5**                              | **HTML5 (XML)**                                            |
+|----------------------------------------|------------------------------------------------------------|
+| `text/html`                            | `application/xhtml+xml`                                    |
+| `&lt;html&gt;`                         | `&lt;html xmlns="http://www.w3.org/1999/xhtml"&gt;`        |
+| `&lt;br&gt;`                           | `&lt;br/&gt;`                                              |
+| `&lt;input disabled&gt;`               | `&lt;input disabled="disabled"/&gt;`                       |
+| `&lt;input disabled=disabled&gt;`      | `&lt;input disabled="disabled"/&gt;`                       |
+| `&lt;p&gt;1. Absatz&lt;p&gt;2. Absatz` | `&lt;p&gt;1. Absatz&lt;/p&gt;&lt;p&gt;2. Absatz&lt;/p&gt;` |
+
+---
 # Welche Inhalte einer Website kennen Sie?
 
 ---
@@ -401,6 +424,67 @@ Sind Block-Elemente.
     ```
 
 ---
+# Exkurs: Verlinkung
+
+* absolute URIs
+* relative URIs
+* absolute Pfade
+* relative Pfade
+
+---
+## Absolute URIs
+
+Die einfachste, aber auch am wenigsten flexibel anwendbare Variante. Sie geben
+den Ort der Resource absolut an ohne die aktuelle URI zu berücksichtigen.
+
+* `http://www.example.org/`
+* `http://www.example.org/index.htm`
+* `http://www.example.org/index.htm#toc`
+* `https://www.example.org/cgi-bin/suche.cgi?ausdruck=Lorem`
+* `ftp://www.example.org/documents/invoice.pdf`
+* `http://www.example.org:8082/backend/admin.html`
+
+---
+## Relative URIs
+
+Ermöglichen das Auffinden von Resouren, abhängig vom aktuell verwendeten Schema
+(`http` oder `https`).
+
+* `//static.example.org/jquery.js`
+* `//www.example.org/style.css`
+
+---
+## Absolute Pfade
+
+Referenzieren Resource absolut auf einer Authority (siehe URLs). Pfade beginnen
+an der **Document-Root** des Webservers.
+
+* `/`
+* `/index.htm`
+* `/index.htm#toc`
+* `/cgi-bin/suche.cgi?ausdruck=Lorem`
+* `/documents/invoice.pdf`
+* `/backend/admin.html`
+
+---
+## Relative Pfade
+
+Verweisen auf Resource, relativ zur aktuellen Resource. Dadurch sind auch
+Verzeichniswechsel möglich. Auch werden Verlinkungen zu anderen Dokumenten
+unabhängig somit unabhängig von der Position innerhalb der **Document-Root**.
+
+* `./`
+* `farben.htm`
+* `./farben.htm`
+* `bilder/grafik.gif`
+* `./bilder/grafik.gif`
+* `../`
+* `../../../../woanders/datei.htm`
+
+---
+# Zurück zu HTML
+
+---
 ## Bilder
 
 * Inline-Elemente
@@ -429,6 +513,17 @@ Sind Block-Elemente.
 ```
 
 ---
+## Formularelemente
+
+Formulare können verschiedene Arten von Elementen zur Eingabe von daten
+beinhalten. Jedes dieser Elemente muss über ein Attribut mit dem Namen
+**`name`** verfügen, welches den Namen des Eingabelements definiert.
+
+```
+&lt;element name="vorname" /&gt;
+```
+
+---
 ## Eingabefelder, Radio-Buttons, Checkboxen, …
 
 <input type="text" value="Hier Text eingeben ...">
@@ -436,7 +531,7 @@ Sind Block-Elemente.
 <input type="radio" checked="checked">
 
 ```
-&lt;input type="..."&gt;
+&lt;input type="..." name="..." /&gt;
 ```
 
 Attribut **`type`**: `text` | `password` | `radio` | `checkbox` | …
@@ -449,8 +544,10 @@ Attribut **`type`**: `text` | `password` | `radio` | `checkbox` | …
 </select>
 
 ```
-&lt;select&gt;
-  &lt;option&gt;
+&lt;select name="..."&gt;
+  &lt;option&gt;Wert 1&lt;/option&gt;
+  &lt;option&gt;Wert 2&lt;/option&gt;
+  &lt;option&gt;Wert 3&lt;/option&gt;
 &lt;/select&gt;
 ```
 
@@ -465,19 +562,216 @@ Dies ist die zweite Zeile ...
 </textarea>
 
 ```
-&lt;textarea&gt;
+&lt;textarea name="..."&gt;
+... Text...
+... mehrzeilig ...
+&lt/textarea&gt;
 ```
 
 ---
-# Buttons
+## Buttons
+
+Kein `name` Attribut nötig, da meist keine Daten direkt am Button eingegeben werden.
 
 <button>Button mit Text</button>
 <input type="submit" value="Input-Submit mit Text">
 
 ```
-&lt;button  type="button | submit | reset"&gt;
+&lt;button type="button | submit | reset"&gt;
 &lt;input type="submit | reset"&gt;
 ```
+
+---
+## Frames
+
+* Definition eines Framesets mittels **`&lt;frameset&gt;`**. Die Attribute **`cols`**
+  und **`rows`** definieren die Spalten und Zeilen.
+* Definition eines einzelen Frames mittels **`&lt;frame&gt;`**. Das Attribut **`src`**
+  legt den URL zum Inhalte des Frames fest.
+* Framesets können ineinander geschachtelt werden.
+* Veraltet und haben Probleme (Bookmarks, Ausdrucke, neu laden, vor/zurück).
+
+```
+&lt;frameset cols="50%,50%"&gt;
+  &lt;frame src="page.html" /&gt;
+  &lt;frame src="http://example.com/main.html" /&gt;
+&lt;/frameset&gt;
+```
+
+---
+## Eingebettete Frames
+
+Betten den Inhalt einer URL in einer Seite ein.
+
+<iframe src="https://www.campus02.at/" class="embedded-website"></iframe>
+
+```
+&lt;iframe src="https://www.campus02.at/"&gt;&lt;/iframe&gt;
+```
+
+---
+## Videos
+
+<video width="640" height="360" autoplay="autoplay" loop="loop" muted="muted">
+  <source src="video/bunny.mp4" type="video/mp4"/>
+  <source src="video/bunny.webm" type="video/webm"/>
+  <source src="video/bunny.ogv" type="video/ogg"/>
+</video>
+
+```
+&lt;video width="640" height="360"
+  muted="muted" autoplay="autoplay" loop="loop"&gt;
+  &lt;source src="video/bunny.mp4" type="video/mp4"/&gt;
+  &lt;source src="video/bunny.webm" type="video/webm"/&gt;
+  &lt;source src="video/bunny.ogv" type="video/ogg"/&gt;
+&lt;/video&gt;
+```
+
+[Demo-Videos](http://www.sample-videos.com/) zum Download.
+
+---
+## Audio
+
+```
+&lt;audio controls="controls"&gt;
+  &lt;source src="foo.wav" type="audio/wav"&gt;
+&lt;/audio&gt;
+```
+
+---
+## Externe Plugins
+
+* Flash
+* Java Applets
+* Silverlight
+* ActiveX
+* ...
+
+```
+&lt;object width="40" height="50" data="flash.swf"&gt;&lt;/object&gt;
+```
+
+---
+# Übung
+
+Wir erstellen gemeinsam eine Trouble-Ticket-Website, bestehend aus drei
+HTML-Dokumenten:
+
+* Einer Tabelle mit allen offenen Tickets (`tabelle.html`)
+* Mindestens einer Detail-Seite zu einem Ticket (`2.html`)
+* Einem Formular für neue Tickets (`formular.html`)
+
+---
+## Die Tabelle
+
+`tabelle.html`
+
+<iframe src="tabelle.html" class="embedded-website"></iframe>
+
+---
+## Die Detail-Seite
+
+`2.html`
+
+<iframe src="2.html" class="embedded-website"></iframe>
+
+---
+## Das Formular
+
+`formular.html`
+
+<iframe src="formular.html" class="embedded-website"></iframe>
+
+POST-Request sollen vom Formular an die
+[Demo-Anwendung](https://campus02.fladi.at/web/form-data) geschickt werden.
+
+---
+# Referenzen
+
+* [HTML 4.01](http://www.w3.org/TR/html401/)
+* [XHTML 1.0](http://www.w3.org/TR/xhtml1/)
+* [HTML5](http://www.w3.org/TR/html5/)
+* [SELFHTML](http://de.selfhtml.org/)
+* [HTML Tutorial](http://www.w3schools.com/html/default.asp)
+
+---
+# Einzelarbeit
+
+Erstellen Sie eine Website für einen Tee-Shop mit diesen Seiten:
+
+* Startseite
+* Produktübersicht
+* Mehrere Detail-Seiten
+* Bestellformular
+
+Daten zu den Tee-Sorten finden Sie auf [Moodle](https://moodle.campus02.at/).
+
+---
+## Startseite
+
+* Name des Shops
+* Logo als Vektor-Grafik
+* Begrüßungstext
+* Ein Zitat (vielleicht zum Theme Tee?)
+* Links zu Produktübersicht und Bestellformular
+
+---
+## Produktübersicht
+
+* Tabelle der Tee-Sorten mit Name, Art, Abbild, Herkunft, Brühzeit und Preis/100g (min. 5 Tee-Sorten)
+* Verlinkung jeder Teesorte auf eine Detail-Seite
+* Internes Sprungziel am Anfang der Seite
+* Link auf internes Sprungziel am Ende der Tabelle
+* Link zurück zur Startseite
+
+---
+## Detail-Seiten
+
+Für jede Tee-Sorte aus der Tabelle soll ein eigenes HTML-Dokument erstellt
+werden, das neben den Daten aus der Tabellenzeile auch eine Produktvorschau in
+Form von einer Abbilung enthält.
+
+Die Bilder dazu finden Sie in der Datei auf [Moodle](https://moodle.campus02.at/).
+
+Folgende Elemente sollen noch enthalten sein:
+
+* Link zurück zur Produktübersicht
+* Link zurück zur Startseite
+
+---
+## Bestellformular (1/2)
+
+Verwenden Sie folgende URL als `action` Attribut am Formular:
+`https://campus02.fladi.at/web/order?pkz=12345678`
+
+* Ersetzen Sie `12345678` durch ihre Personen-Kennzahl.
+* Sie müssen das Formular mit allen Feldern korrekt implementiert haben (Feld-Namen beachten!) damit eine Bestellung gespeichert wird.
+
+Folgende Elemente sollen enthalten sein:
+
+* Link zurück zur Produktübersicht
+* Link zurück zur Startseite
+
+---
+## Bestellformular (2/2)
+
+Folgende Felder sollen enthalten sein:
+
+* Vorname [`first_name`]
+* Nachname [`last_name`]
+* Adresse [`address`]
+* PLZ [`zip_code`]
+* Ort [`city`]
+* Email [`email`]
+* Produktauswahl als Dropdown [`product`]
+* Menge als Dropdown [`amount`]
+* Auswahl aus 3 Versandoptionen als Radio-Button [`delivery`]
+* Bestätigung Geschenkoption als Checkbox [`gift`]
+* Dateiupload für Bilder als Motiv auf Verpackung [`image`]
+* Mehrzeiliges Textfeld für Anmerkungen [`comment`]
+* Bestell-Button zum Absenden
+
+Die Namen in **[]** sind für die `name` Attribute der Formular-Felder zu verwenden.
 
 ---
 
