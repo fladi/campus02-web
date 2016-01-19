@@ -1,7 +1,7 @@
--
-  presentation: 04-html.rst
+04-html:
+  source: 04-html.rst
   css:
-    - theme/campus02.css
+    - css/campus02.css
   template: default
   auto-console: false
   skip-help: true
