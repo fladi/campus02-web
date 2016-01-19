@@ -1,0 +1,49 @@
+<html
+  xmlns="http://www.w3c.org/1999/xhtml"
+  xml:lang="en">
+  <head>
+    <meta charset="utf-8"/>
+    <title>Formular für neues Ticket</title>
+  </head>
+  <body>
+    <h1>Neues Ticket aufnehmen</h1>
+    <form action="https://campus02.fladi.at/web/form-data" method="post" enctype="multipart/form-data">
+      <div>
+        Vorname:
+        <input type="text" name="vorname"/>
+      </div>
+      <div>
+        Nachname:
+        <input type="text" name="nachname"/>
+      </div>
+      <div>
+        Betreff:
+        <input type="text" name="betreff"/>
+      </div>
+      <div>
+        Priorität:
+        <select name="priorität">
+          <option ="0">Niedrig</option>
+          <option ="1">Mittel</option>
+          <option ="2">Hoch</option>
+        </select>
+      </div>
+      <div>
+        Stunden:
+        <input type="number" name="stunden"/>
+      </div>
+      <div>
+        Attachment:
+        <input type="file" name="attachment"/>
+      </div>
+      <div>
+        <textarea cols="50" rows="10" name="beschreibung"></textarea>
+      </div>
+      <div>
+        <button type="submit">Absenden</button>
+        <button type="reset">Zurücksetzen</button>
+      </div>
+    </form>
+    <a href="tabelle.html">Zur Tabelle</a>
+  </body>
+</html>
