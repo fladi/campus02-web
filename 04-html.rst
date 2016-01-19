@@ -818,17 +818,17 @@ Videos
 .. raw:: html
 
   <video width="640" height="360" autoplay="autoplay" loop="loop" muted="muted">
-    <source src="video/bunny.mp4" type="video/mp4"/>
-    <source src="video/bunny.webm" type="video/webm"/>
-    <source src="video/bunny.ogv" type="video/ogg"/>
+    <source src="videos/bunny.mp4" type="video/mp4"/>
+    <source src="videos/bunny.webm" type="video/webm"/>
+    <source src="videos/bunny.ogv" type="video/ogg"/>
   </video>
 
 .. code:: html
 
   <video width="640" height="360" muted="muted" autoplay="autoplay" loop="loop">
-    <source src="video/bunny.mp4" type="video/mp4"/>
-    <source src="video/bunny.webm" type="video/webm"/>
-    <source src="video/bunny.ogv" type="video/ogg"/>
+    <source src="videos/bunny.mp4" type="video/mp4"/>
+    <source src="videos/bunny.webm" type="video/webm"/>
+    <source src="videos/bunny.ogv" type="video/ogg"/>
   </video>
 
 `Demo-Videos`_ zum Download.
@@ -880,7 +880,7 @@ Die Tabelle
 
 .. raw:: html
 
-  <iframe src="tabelle.html" class="embedded-website"></iframe>
+  <iframe src="examples/tabelle.html" class="embedded-website"></iframe>
 
 ----
 
@@ -890,7 +890,7 @@ Die Tabelle
 
 .. raw:: html
 
-  <iframe src="2.html" class="embedded-website"></iframe>
+  <iframe src="examples/2.html" class="embedded-website"></iframe>
 
 ----
 
@@ -900,7 +900,7 @@ Die Tabelle
 
 .. raw:: html
 
-  <iframe src="formular.html" class="embedded-website"></iframe>
+  <iframe src="examples/formular.html" class="embedded-website"></iframe>
 
 POST-Request sollen vom Formular an die `Demo-Anwendung`_ geschickt werden.
 

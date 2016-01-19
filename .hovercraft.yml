@@ -6,3 +6,8 @@
   auto-console: false
   skip-help: true
   skip-notes: true
+  assets:
+    - figures
+    - videos
+    - images
+    - examples
