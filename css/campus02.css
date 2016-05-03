@@ -61,7 +61,9 @@ a {
 }
 
 img {
-  height: 50vh;
+  width: 100%;
+  height: auto;
+  max-height: 60vh;
 }
 
 table {
