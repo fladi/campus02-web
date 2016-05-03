@@ -2,6 +2,8 @@
 :skip-help: true
 :css: css/campus02.css
 
+.. title: HyperText Markup Language
+
 .. role:: html(code)
   :language: html
 
@@ -10,8 +12,13 @@
 .. _Unicode-Zeichen-Tabelle: http://unicode-table.com/de/
 .. _Demo-Videos: http://www.sample-videos.com/
 .. _Demo-Anwendung: https://campus02.fladi.at/web/form-data
+.. _HTML 4.01: http://www.w3.org/TR/html401/
+.. _XHTML 1.0: http://www.w3.org/TR/xhtml1/
+.. _HTML5: http://www.w3.org/TR/html5/
+.. _SELFHTML: http://de.selfhtml.org/
+.. _HTML Tutorial: http://www.w3schools.com/html/default.asp
+.. _Moodle: https://moodle.campus02.at/
 
-.. title: HyperText Markup Language
 
 ----
 
@@ -74,16 +81,13 @@ Text mit Auszeichnung
   <strong>Leonato.</strong> I learn in this letter that <em>Don Peter</em> of
   <em>Arragon</em> comes this night to <em>Messina</em>.
   </p>
-
   <p>
   <strong>Messenger.</strong> He is very near by this: he was not three leagues off when I
   left him.
   </p>
-
   <p>
   <strong>Leonato.</strong> How many gentlemen have you lost in this action?
   </p>
-
   <p>
   <strong>Messenger.</strong> But few of any sort, and none of name.
   </p>
@@ -98,15 +102,12 @@ Text mit Auszeichnung ohne Darstellung
   <p>
   <strong>Leonato.</strong> I learn in this letter that <em>Don Peter</em> of <em>Arragon</em> comes this night to <em>Messina</em>.
   </p>
-
   <p>
   <strong>Messenger.</strong> He is very near by this: he was not three leagues off when I left him.
   </p>
-
   <p>
   <strong>Leonato.</strong> How many gentlemen have you lost in this action?
   </p>
-
   <p>
   <strong>Messenger.</strong> But few of any sort, and none of name.
   </p>
@@ -549,8 +550,8 @@ Tabellen
 
 ----
 
-Links
------
+Links (1/2)
+-----------
 
 * Sind Inline-Elemente
 * Links zu anderen Dokumenten:
@@ -560,6 +561,11 @@ Links
   <a href="http://www.campus02.at/index.asp?menuId=5">
     sichtbarer Linktext
   </a>
+
+----
+
+Links (2/2)
+-----------
 
 * Sprungziel in einem Dokument:
 
@@ -653,6 +659,7 @@ unabhängig somit unabhängig von der Position innerhalb der **Document-Root**.
 ----
 
 Zurück zu HTML
+==============
 
 ----
 
@@ -664,7 +671,7 @@ Bilder
 
 .. raw:: html
 
-  <img src="images/cat.jpg" width="800" height="600" alt="Turkish Angora Cat">
+  <img src="images/cat.jpg" alt="Turkish Angora Cat" class="small">
 
 .. code:: html
 
@@ -722,7 +729,8 @@ Attribut **`type`**: `text` | `password` | `radio` | `checkbox` | …
 
 ----
 
-## Auswahlfelder
+Auswahlfelder
+-------------
 
 .. raw:: html
 
@@ -884,7 +892,8 @@ Die Tabelle
 
 ----
 
-## Die Detail-Seite
+Die Detail-Seite
+----------------
 
 `2.html`
 
@@ -894,7 +903,8 @@ Die Tabelle
 
 ----
 
-## Das Formular
+Das Formular
+------------
 
 `formular.html`
 
@@ -909,15 +919,16 @@ POST-Request sollen vom Formular an die `Demo-Anwendung`_ geschickt werden.
 Referenzen
 ==========
 
-* [HTML 4.01](http://www.w3.org/TR/html401/)
-* [XHTML 1.0](http://www.w3.org/TR/xhtml1/)
-* [HTML5](http://www.w3.org/TR/html5/)
-* [SELFHTML](http://de.selfhtml.org/)
-* [HTML Tutorial](http://www.w3schools.com/html/default.asp)
+* `HTML 4.01`_
+* `XHTML 1.0`_
+* `HTML5`_
+* `SELFHTML`_
+* `HTML Tutorial`_
 
 ----
 
-# Einzelarbeit
+Einzelarbeit
+------------
 
 Erstellen Sie eine Website für einen Tee-Shop mit diesen Seiten:
 
@@ -926,11 +937,12 @@ Erstellen Sie eine Website für einen Tee-Shop mit diesen Seiten:
 * Mehrere Detail-Seiten
 * Bestellformular
 
-Daten zu den Tee-Sorten finden Sie auf [Moodle](https://moodle.campus02.at/).
+Daten zu den Tee-Sorten finden Sie auf `Moodle`_.
 
 ----
 
-## Startseite
+Startseite
+----------
 
 * Name des Shops
 * Logo als Vektor-Grafik
@@ -940,7 +952,8 @@ Daten zu den Tee-Sorten finden Sie auf [Moodle](https://moodle.campus02.at/).
 
 ----
 
-## Produktübersicht
+Produktübersicht
+----------------
 
 * Tabelle der Tee-Sorten mit Name, Art, Abbild, Herkunft, Brühzeit und Preis/100g (min. 5 Tee-Sorten)
 * Verlinkung jeder Teesorte auf eine Detail-Seite
@@ -950,13 +963,14 @@ Daten zu den Tee-Sorten finden Sie auf [Moodle](https://moodle.campus02.at/).
 
 ----
 
-## Detail-Seiten
+Detail-Seiten
+-------------
 
 Für jede Tee-Sorte aus der Tabelle soll ein eigenes HTML-Dokument erstellt
 werden, das neben den Daten aus der Tabellenzeile auch eine Produktvorschau in
 Form von einer Abbilung enthält.
 
-Die Bilder dazu finden Sie in der Datei auf [Moodle](https://moodle.campus02.at/).
+Die Bilder dazu finden Sie in der Datei auf `Moodle`_.
 
 Folgende Elemente sollen noch enthalten sein:
 
@@ -965,10 +979,11 @@ Folgende Elemente sollen noch enthalten sein:
 
 ----
 
-## Bestellformular (1/2)
+Bestellformular (1/2)
+---------------------
 
 Verwenden Sie folgende URL als `action` Attribut am Formular:
-`https://campus02.fladi.at/web/order?pkz=12345678`
+`<https://campus02.fladi.at/web/order?pkz=12345678>`_
 
 * Ersetzen Sie `12345678` durch ihre Personen-Kennzahl.
 * Sie müssen das Formular mit allen Feldern korrekt implementiert haben (Feld-Namen beachten!) damit eine Bestellung gespeichert wird.
@@ -980,9 +995,15 @@ Folgende Elemente sollen enthalten sein:
 
 ----
 
-## Bestellformular (2/2)
+Bestellformular (2/2)
+---------------------
 
 Folgende Felder sollen enthalten sein:
+
+.. raw:: html
+
+  <div>
+  <div style="float: left; width: 50%;">
 
 * Vorname [`first_name`]
 * Nachname [`last_name`]
@@ -992,11 +1013,22 @@ Folgende Felder sollen enthalten sein:
 * Email [`email`]
 * Produktauswahl als Dropdown [`product`]
 * Menge als Dropdown [`amount`]
+
+.. raw:: html
+
+  </div>
+  <div style="float: right; width: 50%;">
+
 * Auswahl aus 3 Versandoptionen als Radio-Button [`delivery`]
 * Bestätigung Geschenkoption als Checkbox [`gift`]
 * Dateiupload für Bilder als Motiv auf Verpackung [`image`]
 * Mehrzeiliges Textfeld für Anmerkungen [`comment`]
 * Bestell-Button zum Absenden
+
+.. raw:: html
+
+  </div>
+  </div>
 
 Die Namen in **[]** sind für die `name` Attribute der Formular-Felder zu verwenden.
 
