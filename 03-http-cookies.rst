@@ -1,29 +1,48 @@
----
+:data-transition-duration: 2000
+:skip-help: true
+:css: css/campus02.css
 
-author: Dr. Xiaoshan Liu, DI Michael Fladischer
-title: Web Grundlagen
+.. role:: html(code)
+  :language: html
 
----
+.. _HTTP State Management Mechanism: http://tools.ietf.org/html/rfc6265
+.. _https\://campus02.fladi.at/: https://campus02.fladi.at/
 
-# HTTP: Cookies
+.. title: HTTP Cookies
 
----
-## Das Problem?
+----
+
+HTTP: Cookies
+=============
+
+
+----
+
+Das Problem?
+------------
 
 *HTTP ist zustandslos.*
 
-![](figure/http-cookies-1.svg)
+.. image:: figures/http-cookies-1.svg
+  :alt: HTTP ist zustandslos
 
----
-## Der Zusammenhang
+
+----
+
+Der Zusammenhang
+----------------
 
 Wie können dann einzelne HTTP-Verbindungen zu einer gemeinsamen Sitzung
 zugeordnet werden?
 
-![](figure/http-cookies-2.svg)
+.. image:: figures/http-cookies-2.svg
+  :alt: HTTP-verbindungen sollten zu Sessions zusammengefasst werden können
 
----
-## Anwendungsfälle
+
+----
+
+Anwendungsfälle
+---------------
 
 Wo wird üblicherweise eine gemeinsame Sitzung über mehrere HTTP-Verbindungen
 hinweg benötigt?
@@ -33,57 +52,84 @@ hinweg benötigt?
 * Temporäre Einstellungen (Sprache, ...)
 * ...
 
----
-## Mögliche Ansätze
+----
+
+Mögliche Ansätze
+----------------
 
  * IP-Adressen?
  * Browser-Erkennung?
  * Eigenen Header mitschicken?
 
----
-# Cookie == HTTP-Header
 
----
+----
+
+Cookie == HTTP-Header
+=====================
+
+
+----
+
 Der Webserver sendet das Cookie als einen eigenen Header:
 
-    Set-Cookie: user=SusiSorglos
+.. code:: http
 
-![](figure/http-cookies-3.svg)
+  HTTP/1.1 200 OK
+  Set-Cookie: user=SusiSorglos
+
+
+.. image:: figures/http-cookies-3.svg
+  :alt: HTTP-verbindungen einer Session werden über ein eindeutiges Cookie miteinander verknüpft
+
 
 *Zum Beispiel als Kennzeichnung der Sitzung nach erfolgreichem Login.*
 
----
+----
+
 Der Webbrowser liest das Cookie aus dem Header aus und legt es in einem lokalen
 Speicher ab, der auch nach Abbau der HTTP-Verbindung erhalten bleibt.
 
-![](figure/http-cookies-4.svg)
+.. image:: figures/http-cookies-4.svg
+  :alt: Cookies werden lokal im Browser gespeichert
 
----
+
+----
+
 Der Webbrowser sendet nun bei jedem nachfolgenden Request das zuvor erhaltene
 Cookie als Header zurück an den Webserver:
 
-    Cookie: user=SusiSorglos
+.. code:: http
 
-![](figure/http-cookies-5.svg)
+  HTTP/1.1 200 OK
+  Cookie: user=SusiSorglos
+
+.. image:: figures/http-cookies-5.svg
+  :alt: Gespeicherte Cookies werden bei jedem weiteren Request mitgesendet
 
 Dieser kann nun anhand der Daten im Cookie die Zuordnung der Verbindung zu einer
 Sitzung treffen.
 
----
-## Aufbau
+----
 
-    set-cookie = "Set-Cookie:" cookie-str
-    cookie-str = NAME "=" VALUE
-                 *(";" cookie-av)
-    cookie-av = "Domain" "=" value
-              | "Max-Age" "=" value
-              | "Expires" "=" value
-              | "Path" "=" value
-              | "Secure"
-              | "HttpOnly"
+Aufbau
+------
 
----
-## Sicherheit
+.. code:: abnf
+
+  set-cookie = "Set-Cookie:" cookie-str
+  cookie-str = NAME "=" VALUE
+                *(";" cookie-av)
+  cookie-av = "Domain" "=" value
+            | "Max-Age" "=" value
+            | "Expires" "=" value
+            | "Path" "=" value
+            | "Secure"
+            | "HttpOnly"
+
+----
+
+Sicherheit
+----------
 
 Cookies sind sicherheitsrelevante Informationen. Sie dürfen nicht an
 unbeteiligte Dritte weitergegeben werden bzw. dürfen nicht zum Schaden des
@@ -92,17 +138,22 @@ Benutzers entwendet werden.
 Um zu verhindern, dass Cookies **gestohlen** werden, können sie mehreren
 Einschränkungen unterliegen.
 
----
-# Demo: Cookie-Diebstahl
 
-Bitte öffnen Sie [https://campus02.fladi.at/](https://campus02.fladi.at/) in
-Ihrem Webbrowser.
+----
+
+Demo: Cookie-Diebstahl
+----------------------
+
+Bitte öffnen Sie `https\://campus02.fladi.at/`_ in Ihrem Webbrowser.
 
 Das zu schützende Cookie in diesem Beispiel ist eine zufällige **Session-ID**
 welche vom Webserver bei einem erfolgreichen Login erzeugt wird.
 
----
-## Same-Origin-Policy
+
+----
+
+Same-Origin-Policy
+------------------
 
  Relevant sind **Domain** und **Path**.
 
@@ -112,20 +163,27 @@ welche vom Webserver bei einem erfolgreichen Login erzeugt wird.
  Beim **Setzen** kann das Cookie bis auf die Ebene der Hauptdomain gesetzt werden.
  *Ausnahme: Third-Level-Domains wie gv.at, co.uk, ... (abhängig vom Webbrowser)*
 
----
-## Secure
+
+----
+
+Secure
+------
 
 Das Cookie darf nur über sichere Kanäle (HTTPS) übertragen werden.
 
----
-## HttpOnly
+
+----
+
+HttpOnly
+--------
 
 JavaScript hat keinen Zugriff auf das Cookie.
 
----
-## Referenzen
+----
+
+Referenzen
+----------
 
 * Alle HTTP RFCs
-* [HTTP State Management Mechanism](http://tools.ietf.org/html/rfc6265)
+* `HTTP State Management Mechanism`_
 
----
