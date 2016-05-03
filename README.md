@@ -2,16 +2,20 @@
 
 Dr. Xiaoshan Liu, DI Michael Fladischer
 
-Folien im Markdown-Format für die LV **Grundlagen WEB** an der [FH
+Folien im reStructuredText-Format für die LV **Grundlagen WEB** an der [FH
 CAMPUS02](https://www.campus02.at/).
 
-## Markdown zu HTML
+## reStructuredText zu HTML
 
-Um aus den Markdown-Dateien HTML-Foliensätze zu erzeugen, wird
-[mdpress](http://egonschiele.github.io/mdpress/) benötigt.
+Um aus den reStructuredText-Dateien HTML-Foliensätze zu erzeugen, wird
+[hovercraft](https://pypi.python.org/pypi/hovercraft) benötigt.
 
 Der Aufruf für `mdpress` ist für jede Markdown-Datei wie folgt:
 
-    mdpress -s campus02 <name>.md
+    hovercraft <name>.rst <directory>
 
-This will create the HTML in the folder `<name>`.
+This will create the HTML in the folder `<directory>`.
+
+To install `hovercraft` on Debian using `apt`:
+
+    sudo apt install hovercraft
