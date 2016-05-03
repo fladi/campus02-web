@@ -61,9 +61,16 @@ a {
 }
 
 img {
+  width: auto%;
+  height: 60vh;
+}
+img.small {
+  height: 30vh;
+}
+
+iframe {
   width: 100%;
-  height: auto;
-  max-height: 60vh;
+  height: 60vh;
 }
 
 table {
