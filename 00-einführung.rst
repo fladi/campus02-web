@@ -1,32 +1,51 @@
----
+:data-transition-duration: 2000
+:skip-help: true
+:css: css/campus02.css
 
-author: Dr. Xiaoshan Liu, DI Michael Fladischer
-title: Web Grundlagen
+.. role:: html(code)
+  :language: html
 
----
-# Web Grundlagen
+.. _Wireshark: https://www.wireshark.org/
+.. _Firefox: https://www.mozilla.org/de/firefox/products/
+.. _Firebug: http://getfirebug.com/
 
-## Dr. Xiaoshan Liu
 
-## DI Michael Fladischer
+----
+
+Web Grundlagen
+==============
+
+
+Dr. Xiaoshan Liu, DI Michael Fladischer
+
 
 *(Mit Unterstützung von DI (FH) Birgit Kammerhofer und DI Arno Hollosi)*
 
----
 
-# Ziele der Lehrveranstaltung
+.. raw:: html
+
+  <div class="corner-ribbon top-right sticky yellow shadow">CAMPUS02</div>
+
+
+----
+
+Ziele der Lehrveranstaltung
+---------------------------
 
 * vorgegebene Webseitenlayouts in HTML und CSS umsetzen können
 * HTTP-Protokoll und seine Eigenschaften kennen und für Architekturentscheidungen beurteilen können
 * Webseiten barrierefrei gestalten können
 
----
+----
 
-# Inhalte
+Inhalte
+=======
 
----
 
-# HTTP
+----
+
+HTTP
+====
 
 *Hypertext Transfer Protocol*
 
@@ -37,9 +56,11 @@ title: Web Grundlagen
 * URI
 * Cookies
 
----
 
-# HTML
+----
+
+HTML
+====
 
 *Hypertext Markup Language*
 
@@ -47,9 +68,11 @@ title: Web Grundlagen
 * Tags, Attribute
 * Ausgewählte HTML-Elemente
 
----
 
-# CSS
+----
+
+CSS
+===
 
 *Cascading Stylesheets*
 
@@ -58,17 +81,21 @@ title: Web Grundlagen
 * Kaskadierung, Vererbung
 * Box-Modell
 
----
 
-# Design & Layout
+----
+
+Design & Layout
+===============
 
 * Barrierefreie Gestaltung
 * Standardlayouts (Spalten, etc.)
 * Fortgeschrittene Designtechniken
 
----
 
-# Organisatorisches
+----
+
+Organisatorisches
+=================
 
 Umfang: **2 SWS / 34 LE / 3 ECTS**
 
@@ -82,12 +109,12 @@ Theorie (**40%**) & Praxis (**60%**)
 
 Termin: **15.1.2016** (2 LE)
 
----
 
-# Werkzeuge
+----
 
-* [Wireshark](https://www.wireshark.org/)
-* [Firefox](https://www.mozilla.org/de/firefox/products/)
-* [Firebug](http://getfirebug.com/)
+Werkzeuge
+=========
 
----
+* `Wireshark`_
+* `Firefox`_
+* `Firebug`_
