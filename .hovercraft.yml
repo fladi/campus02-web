@@ -1,3 +1,44 @@
+00-einführung:
+  source: 00-einführung.rst
+  css:
+    - css/campus02.css
+  template: default
+  auto-console: false
+  skip-help: true
+  skip-notes: true
+01-http:
+  source: 01-http.rst
+  css:
+    - css/campus02.css
+  template: default
+  auto-console: false
+  skip-help: true
+  skip-notes: true
+  assets:
+    - figures
+    - images
+02-http-cache:
+  source: 02-http-cache.rst
+  css:
+    - css/campus02.css
+  template: default
+  auto-console: false
+  skip-help: true
+  skip-notes: true
+  assets:
+    - figures
+    - images
+03-http-cookies:
+  source: 03-http-cookies.rst
+  css:
+    - css/campus02.css
+  template: default
+  auto-console: false
+  skip-help: true
+  skip-notes: true
+  assets:
+    - figures
+    - images
 04-html:
   source: 04-html.rst
   css:
