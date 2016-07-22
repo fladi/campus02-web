@@ -283,13 +283,13 @@ Findet bei HTTP keine direkte Verwendung.
 Aufbau einer URL
 ----------------
 
-.. code::
+::
 
     scheme://user:password@host:port/path?query#fragment
              ^------authority------^
 
 
-.. code::
+::
 
     https://bob:123@campus02.at:80/Homepage?d=true#toc
     https://google.at
