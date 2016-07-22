@@ -100,7 +100,7 @@ Cookie als Header zurück an den Webserver:
 
 .. code:: http
 
-  HTTP/1.1 200 OK
+  GET /secure/path HTTP/1.1
   Cookie: user=SusiSorglos
 
 .. image:: figures/http-cookies-5.svg
