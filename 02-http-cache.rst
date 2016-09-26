@@ -167,7 +167,7 @@ angegebene Zeitpunkt überschritten wurde. Danach muss erneut angefordert werden
 HTTP-Header: Etag
 -----------------
 
-* Ressource wird mit Versionsnummer (zw. Hash) versehen
+* Ressource wird mit Versionsnummer (z.B. Hash) versehen
 * Basiert auf Veränderungsdatum, Dateigröße etc.
 * Wird automatisch von Server bzw. Webanwendung erzeugt
 
