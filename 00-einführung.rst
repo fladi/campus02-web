@@ -8,6 +8,8 @@
 .. _Wireshark: https://www.wireshark.org/
 .. _Firefox: https://www.mozilla.org/de/firefox/products/
 .. _Firebug: http://getfirebug.com/
+.. _Chrome: https://www.google.de/chrome/browser/desktop/
+.. _Notepad++: https://notepad-plus-plus.org/download/v7.html
 
 
 ----
@@ -16,10 +18,10 @@ Web Grundlagen
 ==============
 
 
-Dr. Xiaoshan Liu, DI Michael Fladischer
+DI Christoph Pangerl, DI Michael Fladischer
 
 
-*(Mit Unterstützung von DI (FH) Birgit Kammerhofer und DI Arno Hollosi)*
+*(Mit Unterstützung von DI Arno Hollosi und Dr. Xiaoshan Liu)*
 
 
 .. raw:: html
@@ -97,17 +99,17 @@ Design & Layout
 Organisatorisches
 =================
 
-Umfang: **2 SWS / 34 LE / 3 ECTS**
+Umfang: **2 SWS / 3 ECTS**
 
 Beurteilung: *Endklausur* (100%)
 
 Endklausur: Lehrinhalte der gesamten LV
 
-Theorie (**40%**) & Praxis (**60%**)
+Theorie (**50%**) & Praxis (**50%**)
 
 **Beide** Teile müssen positiv sein!
 
-Termin: **15.1.2016** (2 LE)
+Termin: **27.1.2016** (2 LE)
 
 
 ----
@@ -118,3 +120,5 @@ Werkzeuge
 * `Wireshark`_
 * `Firefox`_
 * `Firebug`_
+* `Chrome`_
+* `Notepad++`_
