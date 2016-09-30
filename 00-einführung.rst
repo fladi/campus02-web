@@ -109,7 +109,7 @@ Theorie (**50%**) & Praxis (**50%**)
 
 **Beide** Teile müssen positiv sein!
 
-Termin: **27.1.2016** (2 LE)
+Termin: **27.1.2017** (2 LE)
 
 
 ----
