@@ -52,3 +52,11 @@
     - videos
     - images
     - examples
+05-bootstrap:
+  source: 05-bootstrap.rst
+  css:
+    - css/campus02.css
+  template: default
+  auto-console: false
+  skip-help: true
+  skip-notes: true
