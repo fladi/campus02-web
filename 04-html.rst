@@ -100,21 +100,18 @@ Text mit Auszeichnung ohne Darstellung
 .. code:: html
 
   <p>
-    <strong>Leonato.</strong>
-    I learn in this letter that <em>Don Peter</em> of <em>Arragon</em> comes this
-    night to <em>Messina</em>.
+    <strong>Leonato.</strong> I learn in this letter that <em>Don Peter</em> of
+    <em>Arragon</em> comes this night to <em>Messina</em>.
   </p>
   <p>
-    <strong>Messenger.</strong>
-    He is very near by this: he was not three leagues off when I left him.
+    <strong>Messenger.</strong> He is very near by this: he was not three
+    leagues off when I left him.
   </p>
   <p>
-    <strong>Leonato.</strong>
-    How many gentlemen have you lost in this action?
+    <strong>Leonato.</strong> How many gentlemen have you lost in this action?
   </p>
   <p>
-    <strong>Messenger.</strong>
-    But few of any sort, and none of name.
+    <strong>Messenger.</strong> But few of any sort, and none of name.
   </p>
 
 ----
