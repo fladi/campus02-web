@@ -21,7 +21,7 @@ Bootstrap 3
 Verwendung
 ----------
 
-.. html::
+.. code:: html
 
   <link rel="stylesheet" href="bootstrap.min.css">
   <link rel="stylesheet" href="bootstrap-theme.min.css">
